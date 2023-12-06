@@ -1,6 +1,24 @@
-let skor = 0;
-// $('#skor').text($.cookie('skor'));
-$('#bs1').hide(100);
+// alert(Cookies.get('skor'));
+
+if(Cookies.get('skor') == 'undefined' || Cookies.get('skor') == 'NaN'){
+    Cookies.set('skor',0);
+    $('#skor').text(Cookies.get('skor'));
+}else{
+    $('#skor').text(Cookies.get('skor'));
+}
+
+let skor = Cookies.get('skor');
+
+console.log(Cookies.get('skor'));
+// alert(skor);
+
+for(var i=1;i<11;i++){
+    $('#bs'+i).hide(100);
+    $('#s'+i).show(100);
+}
+
+
+
 /* The dragging code for '.draggable' from the demo above
          * applies to this demo as well so it doesn't have to be repeated. */
         
@@ -35,16 +53,19 @@ $('#bs1').hide(100);
             ondrop: function(event) {
                 let id_soal = event.relatedTarget.id;
                 // event.relatedTarget.textContent = 'Dropped';
-                skor++;
-                // $.cookie('skor',skor);
                 
-                if(id_soal = 'j1' ){
-                    $('#s1').hide(100);
-                    $('#bs1').show(100);
-                    $('#skor').text(skor);
+                for(var i=1;i<11;i++){
+                    if(id_soal == "jb"+i ){
+                        $("#s"+i).hide(100);
+                        $("#bs"+i).show(100);
+                        Cookies.set("s"+i,1);
+                    }
                 }
+
+                skor++;
+                Cookies.set("skor",skor);
+                $('#skor').text($.cookie('skor'));
                 doBounce($('#skor_container'), 2, '10px', 300);   
-                console.log(event.relatedTarget.id)
             },
             ondropdeactivate: function(event) {
                 // remove active dropzone feedback

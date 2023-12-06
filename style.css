@@ -322,7 +322,30 @@ input[type="checkbox"]:checked::before{
 }
 
 
-
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  #text{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    font-size: 1.5em;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+  }
 
 
 
@@ -343,4 +366,50 @@ input[type="checkbox"]:checked::before{
 	.signup-logo-header .header-flex{
 		display: block;
 	}
+}
+
+.treasure{
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+.award{
+    cursor: pointer;
+}
+
+.bounce-2 {
+    animation-name: bounce-2;
+    animation-timing-function: ease;
+}
+.bounce-3 {
+    animation-name: bounce-2;
+    animation-timing-function: ease;
+}
+
+
+@keyframes bounce-2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes bounce-3 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
