@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - interactive stepped progress bar with prev and next</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="step-1" id="checkout-progress" data-current-step="1">
+  <div class="progress-bar">
+    <div class="step step-1 active"><span> 1</span>
+      <div class="fa fa-check opaque"></div>
+      <div class="step-label"> Proposed</div>
+    </div>
+    <div class="step step-2"><span> 2</span>
+      <div class="fa fa-check opaque"></div>
+      <div class="step-label"> Approved</div>
+    </div>
+    <div class="step step-3"><span> 3</span>
+      <div class="fa fa-check opaque"></div>
+      <div class="step-label"> Under Implmentation</div>
+    </div>
+    <div class="step step-4"><span> 4</span>
+      <div class="fa fa-check opaque"></div>
+      <div class="step-label"> Implemented</div>
+    </div>
+    
+  </div>
+</div>
+<br><br><br>
+<section id="section1" class="section1" style="display:block;">
+  section1
+</section>
+<section id="section2" class="section2" style="display:none;">
+  section2
+</section>
+<section id="section3" class="section3" style="display:none;">
+  section3
+</section>
+<section id="section4" class="section4" style="display:none;">
+  section4
+</section>
+<div class="button-container">
+  <div class="btn btn-prev disabled"> previous step</div>
+  <div class="btn btn-next"> next step</div>
+  <div class="btn btn-submit" style="display:none;">Submit</div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

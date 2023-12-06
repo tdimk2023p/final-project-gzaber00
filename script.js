@@ -2,6 +2,15 @@
 
 // ------------step-wizard-------------
 $(document).ready(function () {
+
+    Swal.fire({
+        title: "Isi Survey!",
+        customClass: 'swal-wide',
+        text: "Seret kartu untuk mengisi survey",
+        imageUrl: "./assets/img/guide.gif",
+        imageWidth: 800,
+        imageHeight: 400,
+    });
     $('#loading').hide();
     $('.nav-tabs > li a[title]').tooltip();
 
@@ -51,4 +60,3 @@ $('.nav-tabs').on('click', 'li', function () {
     $('.nav-tabs li.active').removeClass('active');
     $(this).addClass('active');
 });
-
